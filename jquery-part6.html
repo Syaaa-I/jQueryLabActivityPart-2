@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 6</title>
+
+  <!-- jQuery Mobile CSS & JS -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <div data-role="page" id="page1">
+
+        <div data-role="header" style="background-color:#f5ece1; color:black; border-color:#86817b;">
+            <h1>Header</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <h2>Jquery Mob Buttons</h2>
+            <a href="#" class="ui-btn ui-btn-inline ui-corner-all" style="background-color:black; color: white;">Button 1</a>
+            <a href="#" class="ui-btn ui-btn-inline" style="background-color: black; color: white;">Button 2</a>
+
+            <a href="index.html" class="ui-btn ui-btn-inline ui-corner-all">Back to Home</a>
+        </div>
+
+        <!-- Footer with themes -->
+        <div data-role="footer" data-position="fixed" style="background-color:#f5ece1; color:black; border-color:#86817b;">
+            <h4>&copy; NUR SYAHIRA SHAHRUDDIN - 10DIT23F2026</h4>
+        </div>
+        
+    </div>
+</body>
+</html>

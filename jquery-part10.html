@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 10 - Contact page</title>
+
+  <!-- jQuery Mobile CSS & JS -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid #ccc;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+        }
+
+        .nav-buttons button {
+            background-color: #eee;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size:14px;
+            cursor: pointer;
+        }
+
+        .Logo img {
+            width: 180px;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            text-align: Left;
+            margin: 10px 0;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            display: inline-block;
+            margin: 5px 10px;
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .social-media i {
+            margin-right: 6px;
+        }
+
+        .reflection {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #show-reflection {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            background-color: #007bff;
+            border: none;
+        }
+
+        #show-reflection:hover {
+            background-color: #0056b3;
+        }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+    <div data-role="page" id="Homepage">
+
+        <div data-role="header" style="background-color: #007bff; color: white;">
+            <h1>Q4: Contact Us with jQuery</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+          <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button class="nav-btn"><i class="fas fa-info-circle"></i>About Us</button>
+            <button class="nav-btn"><i class="fas fa-cogs"></i>Our Services</button>
+            <button class="nav-btn"><i class="fas fa-edit"></i>Registration Form</button>
+            <button class="nav-btn"><i class="fas fa-envelope"></i>Contact Us</button>
+        </div>
+
+        <!-- Logo -->
+        <div class="Logo">
+            <img src="images/Logo.png" alt="Logo Politeknik">
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p><a href="https://wa.me/601129448148" target="_blank">WhatsApp: Send a WhatsApp message</a></p>
+            <p>Call: 011-29448148</p>
+            <p>Email: syirasyah78@gmail.com</p>
+            <p>Address: Politeknik Seberang Perai, Jalan Permatang Pauh, <br> 13500 Permatang Pauh, Pulau Pinang, Malaysia</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i>Add Us on Facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i>Add Us on Twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i>Add Us on Instagram</a>
+        </div>
+
+        <!-- Reflection Section -->
+        <div class="reflection">
+            <button id="show-reflection">Show Reflection</button>
+            <div id="reflection-display" style="display: none; margin-top: 15px; text-align: center;">
+                <h3>Reflection</h3>
+                <p><strong>1. What did you learn about using jQuery in this task?</strong><br>
+                I learn how jQuery makes it easy to add interactive effects to a webpage.
+                </p>
+
+                <p><strong>2. Which jQuery function or method did you find most useful?</strong><br>
+                The hover method was specially useful for adding a dynamic styling to navigation buttons.</p>
+
+                <p><strong>3. How could you apply this technique to enhance a real website?</strong><br>
+                These techniques can enhance user experience by making website feels more engaging and responsive to user actions.</p>
+            </div>
+        </div>
+
+            <a href="index.html" class="ui-btn ui-btn-inline ui-corner-all">Back to Home</a>
+        </div>
+
+        <div data-role="footer" style="background-color: #007bff; color: white;" position="fixed">
+            <h4>&copy; NUR SYAHIRA SHAHRUDDIN - 10DIT23F2026</h4>
+        </div>
+
+    </div>
+</body>
+
+<script>
+  $(document).on("mobileinit", function () {
+    $.mobile.ajaxEnabled = false;
+  });
+
+  $(document).ready(function(){
+    $(".Logo img").hide().fadeIn(2000);
+
+    // Hover effects
+    $(".nav-btn").hover(function(){
+      $(this).css("background-color", "#2196f3");
+    } , function(){
+      $(this).css("background-color", "");
+    });
+
+    // Animate social icons on hover
+    $(".social-media a").hover(function(){
+      $(this).animate({fontSize: "20px"}, 300);
+    }, function(){
+      $(this).animate({fontSize: "16px"}, 300);
+    });
+
+    // show reflection section
+    $("#show-reflection").click(function(){
+      $("#reflection-display").toggle();
+    });
+
+  });
+
+</script>
+</html>

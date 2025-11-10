@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 8</title>
+
+  <!-- jQuery Mobile CSS & JS -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <div data-role="page" id="page1">
+
+        <div data-role="header" style="background-color:#f5ece1; color:black; border-color:#86817b;">
+            <h1>Header</h1>
+        </div>
+
+        <div data-role="main" class="ui-content" >
+
+            <h3>Read only, Unordered List</h3>
+            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="search it.. Get it...">
+                <li style="background-color: rgb(112, 110, 110); color: white;">Html</li>
+                <li style="background-color: rgb(112, 110, 110); color: white;">Css</li>
+                <li style="background-color: rgb(112, 110, 110); color: white;">JavaScript</li>
+                <li style="background-color: rgb(112, 110, 110); color: white;">Bootstrap</li>
+            </ul>
+
+            <h3>Read only, Ordered List</h3>
+            <ol data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="search it.. Get it..." data-filter-reveal="true">
+                <li style="background-color: rgb(112, 110, 110); color: white;">Html</li>
+                <li style="background-color: rgb(112, 110, 110); color: white;">Css</li>
+                <li style="background-color: rgb(112, 110, 110); color: white;">JavaScript</li>
+                <li style="background-color: rgb(112, 110, 110); color: white;">Bootstrap</li>
+            </ol>
+
+            <h3>Clickable List</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="home"><a href="">Home</a></li>
+                <li><a style="background-color: rgb(112, 110, 110); color: white;" href="#">css</a></li>
+                <li><a style="background-color: rgb(112, 110, 110); color: white;" href="#">JavaScript</a></li>
+                <li><a style="background-color: rgb(112, 110, 110); color: white;" href="#">Bootstrap</a></li>
+            </ul>
+
+            <a href="index.html" class="ui-btn ui-btn-inline ui-corner-all">Back to Home</a>
+            
+        </div>
+
+        <!-- Footer with themes -->
+        <div data-role="footer" data-position="fixed" style="background-color:#f5ece1; color:black; border-color:#86817b;">
+            <h4>&copy; NUR SYAHIRA SHAHRUDDIN - 10DIT23F2026</h4>
+        </div>
+        
+    </div>
+</body>
+</html>

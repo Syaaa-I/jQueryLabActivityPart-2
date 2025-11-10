@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery part 4 - Meta Tags</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This website is about jquery mobile">
+    <meta name="keywords" content="jquery,html,css,jquery mobile">
+
+  <!-- jQuery Mobile CSS & JS -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</script>
+</head>
+<body>
+
+    <div data-role="page" id="page1">
+
+        <div data-role="header">
+            <h1>Header</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>Meta tags on the webpages</p>
+
+            <a href="index.html" class="ui-btn ui-btn-inline ui-corner-all">Back to Home</a>
+        </div>
+
+        <div data-role="footer">
+            <h4>&copy; NUR SYAHIRA SHAHRUDDIN - 10DIT23F2026</h4>
+        </div>
+        
+    </div>
+</body>
+</html>

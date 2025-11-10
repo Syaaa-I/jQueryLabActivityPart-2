@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 9</title>
+
+  <!-- jQuery Mobile CSS & JS -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <!-- Homepage -->
+    <div data-role="page" id="page1">
+
+        <div data-role="header" style="background-color:#f5ece1; color:black; border-color:#86817b;">
+            <h1>HOME PAGE</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            
+            <ul data-role="listview">
+                <li data-icon="video"><a style="background-color: rgb(112, 110, 110); color: white;" href="#page2" data-transition="pop">Videos</a></li>
+                <li data-icon="audio"><a style="background-color: rgb(112, 110, 110); color: white;" href="#page3" data-transition="slidedown">Audio</a></li>
+                <li data-icon="grid"><a style="background-color: rgb(112, 110, 110); color: white;" href="#">Pictures</a></li>
+            </ul>
+
+            <a href="index.html" class="ui-btn ui-btn-inline ui-corner-all">Back to Home</a>
+        </div>
+
+        <!-- Footer with themes -->
+        <div data-role="footer" data-position="fixed" style="background-color:#f5ece1; color:black; border-color:#86817b;">
+            <h4>&copy; NUR SYAHIRA SHAHRUDDIN - 10DIT23F2026</h4>
+        </div>
+        
+    </div>
+
+    
+    <!-- Videos -->
+    <div data-role="page" id="page2">
+
+        <div data-role="header">
+            <h1>Videos Panel</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <h1>WELCOME TO VIDEO CENTRE</h1>
+            <a href="#page1" data-transition="flow">Back</a>
+
+        </div>
+
+        <!-- Footer with themes -->
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; NUR SYAHIRA SHAHRUDDIN - 10DIT23F2026</h4>
+        </div>
+        
+    </div>
+
+    <!-- Audio -->
+    <div data-role="page" id="page3">
+
+        <div data-role="header">
+            <h1>Audio Panel</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <h1>WELCOME TO AUDIO CENTRE</h1>
+            <a href="#page1" data-transition="slidefade">Back</a>
+
+        </div>
+
+        <!-- Footer with themes -->
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; NUR SYAHIRA SHAHRUDDIN - 10DIT23F2026</h4>
+        </div>
+        
+    </div>
+</body>
+</html>
